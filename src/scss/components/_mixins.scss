@@ -1,0 +1,6 @@
+@mixin service-info-bubble($w, $h, $src, $wimg, $himg) {
+  width: $w;
+  height: $h;
+  background: url($src) no-repeat center/cover;
+  background-size: $wimg $himg;
+}

@@ -78,3 +78,18 @@ function fadeIn(el, display) {
     }
   })();
 }
+
+const serviceWeb = document.body.querySelector(".service-web");
+const serviceWebInfo = document.body.querySelector(".service-web-info");
+serviceWeb.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (serviceWebInfo.style.visibility !== "visible") {
+    serviceWebInfo.style.visibility = "visible";
+  } else {
+    serviceWebInfo.style.visibility = "hidden";
+  }
+});
+
+serviceWebInfo.addEventListener("click", () => {
+  serviceWebInfo.style.visibility = "hidden";
+});

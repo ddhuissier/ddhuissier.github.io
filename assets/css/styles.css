@@ -10752,6 +10752,18 @@ html {
   height: 100%;
 }
 
+main {
+  display: none;
+}
+
+.under-construction {
+  width: 60%;
+  height: 300px;
+  margin: 0 auto;
+  background: url(../../assets/img//under_construction.gif) no-repeat center/cover;
+  background-size: 100% 100%;
+}
+
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
@@ -10999,7 +11011,7 @@ footer.footer .social-link:hover {
   z-index: 1;
 }
 .portfolio-item .caption .caption-content {
-  color: #fff;
+  color: #000;
   margin: auto 2rem 2rem;
 }
 .portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
@@ -11030,11 +11042,11 @@ footer.footer .social-link:hover {
     clip-path: inset(-1px);
   }
   .portfolio-item:hover img {
-    clip-path: inset(2rem);
+    clip-path: inset(0.5rem);
   }
   .portfolio-item:hover .caption {
     background-color: rgba(8, 8, 7, 0.3666666667);
-    clip-path: inset(2rem);
+    clip-path: inset(0.5rem);
   }
 }
 
@@ -11047,6 +11059,61 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.service-icon:hover {
+  animation: serviceBubble 1s ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes serviceBubble {
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.service-web-info {
+  visibility: hidden;
+  position: absolute;
+  width: 60%;
+  min-height: 350px;
+  background-color: #fff;
+  color: #08080777;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.service-web-info-img {
+  cursor: pointer;
+}
+.service-web-info-img #angular {
+  width: 100%;
+  height: 40px;
+  background: url("../../../assets/img/techno/angular_logo.svg") no-repeat center/cover;
+  background-size: 100px 100px;
+}
+.service-web-info-img #blazor {
+  width: 100%;
+  height: 40px;
+  background: url("../../../assets/img/techno/blazor_logo.svg") no-repeat center/cover;
+  background-size: 100px 100px;
+}
+.service-web-info-img #react {
+  width: 100%;
+  height: 40px;
+  background: url("../../../assets/img/techno/React_logo.svg") no-repeat center/cover;
+  background-size: 100px 100px;
+}
+.service-web-info-img #flutter {
+  width: 100%;
+  height: 40px;
+  background: url("../../../assets/img/techno/flutter-logo.svg") no-repeat center/cover;
+  background-size: 100px 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */

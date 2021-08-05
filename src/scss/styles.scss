@@ -12,8 +12,10 @@
 @import "./global.scss";
 
 // Components
-@import "./components/sidebar.scss";
-@import "./components/buttons.scss";
+@import "./components/mixins";
+@import "./components/sidebar";
+@import "./components/buttons";
+@import "./components/cursor";
 
 // Sections
 @import "./sections/cta.scss";

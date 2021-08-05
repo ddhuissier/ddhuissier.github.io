@@ -1,14 +1,80 @@
-// 
+//
 // Services
-// 
+//
 
 .service-icon {
-    background-color: $white;
-    color: $primary;
-    height: 7rem;
-    width: 7rem;
-    display: block;
-    line-height: 7.5rem;
-    font-size: 2.25rem;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  color: $primary;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.service-icon:hover {
+  animation: serviceBubble 1s ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes serviceBubble {
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.service-web-info {
+  visibility: hidden;
+  position: absolute;
+  width: 60%;
+  min-height: 350px;
+  background-color: $white;
+  color: $primary;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.service-web-info-img {
+  cursor: pointer;
+  #angular {
+    @include service-info-bubble(
+      100%,
+      40px,
+      "../../../assets/img/techno/angular_logo.svg",
+      100px,
+      100px
+    );
+  }
+  #blazor {
+    @include service-info-bubble(
+      100%,
+      40px,
+      "../../../assets/img/techno/blazor_logo.svg",
+      100px,
+      100px
+    );
+  }
+  #react {
+    @include service-info-bubble(
+      100%,
+      40px,
+      "../../../assets/img/techno/React_logo.svg",
+      100px,
+      100px
+    );
+  }
+  #flutter {
+    @include service-info-bubble(
+      100%,
+      40px,
+      "../../../assets/img/techno/flutter-logo.svg",
+      100px,
+      100px
+    );
+  }
 }
